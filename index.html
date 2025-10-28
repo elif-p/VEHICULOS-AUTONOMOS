@@ -17,36 +17,37 @@
 
     header {
       text-align: center;
-      padding: 2rem 1rem 1rem;
+      padding: 2rem;
       background-color: rgba(255, 105, 180, 0.2);
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       text-shadow: 2px 2px #000;
     }
 
     main {
       flex: 1;
-      padding: 2rem 1rem;
+      padding: 2rem;
       text-align: center;
     }
 
     main p {
       font-size: 1.2rem;
       max-width: 700px;
-      margin: 0 auto 2rem;
+      margin: 0 auto;
       line-height: 1.6;
     }
 
-    .botones-superiores,
-    .botones-inferiores {
+    .cuadros {
       display: flex;
       justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
+      gap: 1.5rem;
+      margin-top: 3rem;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 1rem;
     }
 
     .cuadro-link {
@@ -55,8 +56,8 @@
       color: black;
       border: 2px solid white;
       border-radius: 12px;
-      width: 140px;
-      height: 140px;
+      width: 120px;
+      height: 120px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -64,6 +65,7 @@
       font-size: 1.1rem;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
       transition: transform 0.3s ease, background-color 0.3s ease;
+      flex-shrink: 0;
     }
 
     .cuadro-link:hover {
@@ -77,29 +79,12 @@
       padding: 1rem;
       background-color: rgba(0, 0, 0, 0.5);
       font-size: 0.9rem;
-      margin-top: auto;
     }
 
     @media (max-width: 600px) {
-      .cuadro-link {
-        width: 100%;
-        height: auto;
-        padding: 1rem;
-        font-size: 1rem;
-      }
-
-      .botones-superiores,
-      .botones-inferiores {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      header h1 {
-        font-size: 2rem;
-      }
-
-      main p {
-        font-size: 1rem;
+      .cuadros {
+        flex-direction: row;
+        overflow-x: auto;
       }
     }
   </style>
@@ -112,15 +97,12 @@
   <main>
     <p>Descubre cómo los vehículos autónomos están revolucionando el transporte moderno, combinando inteligencia artificial, sensores avanzados y diseño futurista para crear una experiencia de conducción sin intervención humana.</p>
 
-    <div class="botones-superiores">
-      <a href="pagina1.html" class="cuadro-link">Información general</a>
-      <a href="pagina2.html" class="cuadro-link">Video informativo</a>
-      <a href="pagina3.html" class="cuadro-link">Tabla informativa</a>
-    </div>
-
-    <div class="botones-inferiores">
-      <a href="formulario.html" class="cuadro-link">Formulario</a>
-      <a href="pagina5.html" class="cuadro-link">Información del autor</a>
+    <div class="cuadros">
+      <a href="pagina1.html" class="cuadro-link">informacion general</a>
+      <a href="pagina2.html" class="cuadro-link">video informativo</a>
+      <a href="pagina3.html" class="cuadro-link">tabla informativa</a>
+      <a href="formulario.html" class="cuadro-link">formulario</a>
+      <a href="pagina5.html" class="cuadro-link">informacion del creador</a>
     </div>
   </main>
 
