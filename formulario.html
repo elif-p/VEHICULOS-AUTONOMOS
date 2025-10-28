@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vehiculos Autonomos</title>
+  <title>Vehículos Autónomos</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <style>
     * {
@@ -92,30 +92,31 @@
   </style>
 </head>
 <body>
-<header style="display: flex; justify-content: flex-start; align-items: center; padding: 10px;">
-  <a href="index.html" style="
-    background-color: #007BFF;
-    color: white;
-    padding: 8px 16px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-family: sans-serif;
-    font-size: 16px;
-  ">
-    Pagina principal
-  </a>
-</header>
-  <h1>Explorando los Vehiculos Autonomos</h1>
+  <header style="display: flex; justify-content: flex-start; align-items: center; padding: 10px;">
+    <a href="index.html" style="
+      background-color: #007BFF;
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-family: sans-serif;
+      font-size: 16px;
+    ">
+      Página principal
+    </a>
+  </header>
+
+  <h1>Explorando los Vehículos Autónomos</h1>
   <p>Comparte tu opinión sobre el futuro de los autos sin conductor y su impacto en la sociedad.</p>
 
   <form id="formulario">
     <label for="nombre">Nombre completo:</label>
     <input type="text" id="nombre" name="nombre" required />
 
-    <label for="correo">Correo electronico:</label>
+    <label for="correo">Correo electrónico:</label>
     <input type="email" id="correo" name="correo" required />
 
-    <label for="opinion">¿Que opinas sobre los vehículos autonomos?</label>
+    <label for="opinion">¿Qué opinas sobre los vehículos autónomos?</label>
     <textarea id="opinion" name="opinion" rows="4" required></textarea>
 
     <button type="button" onclick="generarPDF()">Guardar en PDF</button>
@@ -137,14 +138,13 @@
       const doc = new jsPDF();
       doc.setFontSize(14);
       doc.text("Formulario: Vehículos Autónomos", 10, 10);
-    doc.text(Nombre: ${nombre}, 10, 20);
-doc.text(Correo: ${correo}, 10, 30);
-doc.text("Opinión:", 10, 40);
-doc.text(opinion, 10, 50, { maxWidth: 180 });
+      doc.text(`Nombre: ${nombre}`, 10, 20);
+      doc.text(`Correo: ${correo}`, 10, 30);
+      doc.text("Opinión:", 10, 40);
+      doc.text(opinion, 10, 50, { maxWidth: 180 });
 
-doc.save("vehiculos_autonomos_formulario.pdf");
-}
+      doc.save("vehiculos_autonomos_formulario.pdf");
+    }
   </script>
-
 </body>
 </html>
